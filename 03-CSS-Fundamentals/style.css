@@ -4,11 +4,13 @@
   padding: 0;
 }
 
+/* PAGE SECTIONS */
 body {
-  font-family: sans-serif;
   color: #444;
+  font-family: sans-serif;
 
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 .container {
@@ -25,11 +27,12 @@ body {
   padding-right: 40px; */
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 nav {
   font-size: 18px;
+  /* text-align: center; */
 }
 
 article {
@@ -37,7 +40,8 @@ article {
 }
 
 .post-header {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  /* position: relative; */
 }
 
 aside {
@@ -50,6 +54,7 @@ aside {
   width: 500px;
 }
 
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
@@ -70,6 +75,7 @@ h2 {
 h3 {
   font-size: 30px;
   margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -84,15 +90,16 @@ p {
   margin-bottom: 15px;
 }
 
-ol,
-ul {
+ul,
+ol {
   margin-left: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 li {
   font-size: 20px;
   margin-bottom: 10px;
+  /* display: inline; */
 }
 
 li:last-child {
@@ -121,9 +128,21 @@ li:last-child {
   font-weight: bold;
 }
 
+/* ul {
+  list-style: none;
+} */
+
 .related {
   list-style: none;
 }
+
+/* body {
+  background-color: orangered;
+} */
+
+/* .first-li {
+  font-weight: bold;
+} */
 
 li:first-child {
   font-weight: bold;
@@ -133,17 +152,16 @@ li:last-child {
   font-style: italic;
 }
 
-/* li:nth-child(odd) {
+/* li:nth-child(even) {
   color: red;
 } */
 
-/* Misconception: this won't work */
+/* Misconception: this won't work! */
 article p:first-child {
   color: red;
 }
 
 /* Styling links */
-
 a:link {
   color: #1098ad;
   text-decoration: none;
@@ -161,7 +179,7 @@ a:hover {
 }
 
 a:active {
-  color: black;
+  background-color: black;
   font-style: italic;
 }
 /* LVHA */
@@ -171,7 +189,62 @@ a:active {
   height: auto;
 }
 
-/* Conflicting Selector */
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+
+  display: block; */
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* h3 + p::first-line {
+  color: red;
+} */
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+h2::before {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+/* Resolving conflicts */
 /* #copyright {
   color: red;
 }
@@ -186,4 +259,9 @@ a:active {
 
 footer p {
   color: green !important;
+} */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
 } */
